@@ -103,7 +103,7 @@ const Skills = () => {
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span className="text-muted-foreground">{skill.name}</span>
+                          <span className="text-card-foreground font-medium">{skill.name}</span>
                           <span className="text-primary font-medium">{skill.level}%</span>
                         </div>
                         <Progress

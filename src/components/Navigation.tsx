@@ -24,12 +24,21 @@ const Navigation = () => {
     { label: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-lg border-b border-border"
+          : "bg-background/30 backdrop-blur-sm"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -51,6 +60,7 @@ const Navigation = () => {
               <motion.a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-muted-foreground hover:text-primary transition-colors relative group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -60,6 +70,26 @@ const Navigation = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
+            
+            {/* Resume & Certifications */}
+            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-border">
+              <motion.a
+                href="#"
+                className="text-sm bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1.5 rounded-lg transition-colors border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Resume
+              </motion.a>
+              <motion.a
+                href="#"
+                className="text-sm bg-accent/10 hover:bg-accent/20 text-accent px-3 py-1.5 rounded-lg transition-colors border border-accent/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Certificates
+              </motion.a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,15 +142,37 @@ const Navigation = () => {
                   <motion.a
                     key={item.label}
                     href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     className="text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-card"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
                   </motion.a>
                 ))}
+                
+                {/* Mobile Resume & Certifications */}
+                <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+                  <motion.a
+                    href="#"
+                    className="text-sm bg-primary/10 hover:bg-primary/20 text-primary px-4 py-2 rounded-lg transition-colors border border-primary/20 text-center"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    Resume
+                  </motion.a>
+                  <motion.a
+                    href="#"
+                    className="text-sm bg-accent/10 hover:bg-accent/20 text-accent px-4 py-2 rounded-lg transition-colors border border-accent/20 text-center"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.7 }}
+                  >
+                    Certificates
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           )}
