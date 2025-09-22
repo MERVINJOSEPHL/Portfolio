@@ -70,7 +70,7 @@ const Skills = () => {
 
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-purple-50/40 via-pink-50/30 to-blue-50/40">
+    <section id="skills" className="py-20 bg-muted/20">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -91,7 +91,7 @@ const Skills = () => {
 
           {/* Skills Grid */}
           <motion.div variants={itemVariants}>
-            <Card className="glass-card p-8 shadow-xl">
+            <Card className="bg-card border-border p-8">
               <h3 className="text-2xl font-bold mb-8 text-center">Technical Skills</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {skillCategories.map((category) => (
@@ -103,19 +103,7 @@ const Skills = () => {
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="space-y-2">
                         <div className="flex justify-between text-sm">
-                          <span 
-                            className="font-medium"
-                            style={{
-                              color: skill.name === 'Python' ? 'hsl(var(--keyword-python))' :
-                                     skill.name === 'React' ? 'hsl(var(--keyword-react))' :
-                                     skill.name === 'Machine Learning' || skill.name === 'NLP' || skill.name === 'LLM Integration' ? 'hsl(var(--keyword-ai))' :
-                                     skill.name === 'TypeScript' || skill.name === 'Flask/FastAPI' ? 'hsl(var(--keyword-js))' :
-                                     skill.name === 'AWS' || skill.name === 'Azure' || skill.name === 'Docker' || skill.name === 'CI/CD' ? 'hsl(var(--keyword-cloud))' :
-                                     'hsl(var(--keyword-fullstack))'
-                            }}
-                          >
-                            {skill.name}
-                          </span>
+                          <span className="text-muted-foreground">{skill.name}</span>
                           <span className="text-primary font-medium">{skill.level}%</span>
                         </div>
                         <Progress
@@ -138,7 +126,7 @@ const Skills = () => {
                 { number: "25+", label: "Projects Completed", icon: "💼" },
                 { number: "15+", label: "Technologies Mastered", icon: "⚡" },
               ].map((stat, index) => (
-                <Card key={stat.label} className="glass-card p-6 text-center card-hover">
+                <Card key={stat.label} className="bg-card border-border p-6 text-center card-hover">
                   <div className="text-4xl mb-3">{stat.icon}</div>
                   <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
                   <div className="text-muted-foreground">{stat.label}</div>
