@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "ContractX AI",
       description: "AI-powered contract analysis platform using transformer models for extracting contractual obligations and compliance workflows.",
-      image: "/certifications/raptor-chatbot.jpg",
+      image: "certifications/raptor-chatbot.jpg",
       icon: Brain,
       tech: ["Python", "Transformers", "NLP", "Azure OpenAI", "Flask"],
       github: "#",
@@ -27,7 +27,7 @@ const Projects = () => {
     {
       title: "Advinci Voice Platform",
       description: "Enhanced voice-over-telecommunication efficiency through language model optimization and sentiment analysis.",
-      image: "/certifications/advinci.png",
+      image: "certifications/advinci.png",
       icon: Database,
       tech: ["Voice Processing", "LLM","Sentiment Analysis","Servem AI","FastAPI"],
       github: "#",
@@ -37,7 +37,7 @@ const Projects = () => {
     {
       title: "Asami",
       description: "Full-stack AI chat bot application using Azure OpenAI and Amazon Claude models. To increase productivity and efficiency of SEO.",
-      image: "/certifications/chatbot.jpg",
+      image: "certifications/chatbot.jpg",
       icon: Code,
       tech: ["React", "Flask", "PostgreSQL", "Azure OpenAI", "Claude"],
       github: "#",
@@ -47,7 +47,7 @@ const Projects = () => {
     {
 "title": "Synthetic Contract Generator",
 "description": "Python-based system generating synthetic 'Scope of Work' clauses for construction contracts, ensuring privacy preservation while mimicking real contract structures using LLM and anonymization techniques.",
-"image": "/certifications/contract.png",
+"image": "certifications/contract.png",
 "icon": "FileText",
 "tech": ["GEO Fence", "Streamlit", "Google Gemini API", "Faker", "Pandas"],
 "github": "https://github.com/MERVINJOSEPHL/synthetic-contract-generator",
@@ -57,7 +57,7 @@ const Projects = () => {
 {
 "title": "Student Management Application",
 "description": "Full-stack application for collecting and organizing student data in a file-based manner, supporting features like viewing, filtering, searching, updating, and deleting student records with performance analytics.",
-"image": "/certifications/OIP.webp",
+"image": "certifications/OIP.webp",
 "icon": "Users",
 "tech": ["Python", "Flask", "SQLite", "Jinja2", "Bootstrap"],
 "github": "https://github.com/MERVINJOSEPHL/Student-Management-Application",
@@ -66,7 +66,7 @@ const Projects = () => {
 }, {
 "title": "HouseHoldService",
 "description": "Multi-user application serving as a platform for comprehensive home servicing and solutions, featuring roles for admin, service providers, and customers with functionalities like service management, booking, and reporting.",
-"image": "/certifications/householdservice.webp",
+"image": "certifications/householdservice.webp",
 "icon": "Home",
 "tech": ["Flask", "VueJS", "SQLite", "Redis", "Celery", "Bootstrap"],
 "github": "https://github.com/MERVINJOSEPHL/HouseHoldService",

@@ -22,7 +22,7 @@ const Certifications = () => {
   "description": "This certificate confirms that Mervin Joseph Louis Sagayaraj has successfully completed Python 3.4.3 training, including an online exam conducted remotely from IIT Bombay, with course material provided by the Spoken Tutorial Project, IIT Bombay. The examination was invigilated by Dr. L. Sherly Pushpa Annabel from St. Joseph's College of Engineering (Kanchipuram).",
   "skills": ["Python 3.4.3", "Programming Fundamentals", "Online Examination"],
   "credentialId": "3005415SCR",
-  "image": "/certifications/python.png"
+  "image": "certifications/python.png"
 },
     {
   "title": "Foundation Certificate in Data Science and Applications",
@@ -33,7 +33,7 @@ const Certifications = () => {
   "description": "The Foundation Certificate from IIT Madras recognizes completion of 8 foundational courses in programming, mathematics, and data science as part of the BS Degree Program in Data Science and Applications, awarded to Mervin Joseph L on April 30, 2025.",
   "skills": ["Programming Basics", "Mathematics for Data Science", "Data Structures", "Problem Solving"],
   "credentialId": "IITM-FC-2025-21F3001647",
-  "image": "/certifications/foundation.png"
+  "image": "certifications/foundation.png"
   },
     {
       title: "Diploma In Programming",
@@ -44,7 +44,7 @@ const Certifications = () => {
       description: "The Diploma in Programming from IIT Madras is a provisional certification awarded to Mervin Joseph L on April 30, 2025, recognizing completion of foundational and intermediate programming courses and projects in the BS Degree Program in Data Science and Applications.",
       skills: ["Programming Fundamentals", "Web Development", "Database Management", "Problem-Solving"],
       credentialId: "IITM-DP-2025-21F3001647",
-      image: "/certifications/diploma.png", 
+      image: "certifications/diploma.png", 
     },
     
   ];
