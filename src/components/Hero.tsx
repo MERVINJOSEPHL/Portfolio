@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" id="home" >
       {/* Animated Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -71,17 +71,17 @@ const Hero = () => {
               Software Engineer & AI Enthusiast
             </h2>
             <div className="flex flex-wrap justify-center gap-3 text-sm md:text-base">
-              {["Python", "React", "AI/ML", "Cloud", "Full-Stack"].map((skill, index) => (
-                <motion.span
-                  key={skill}
-                  className="px-3 py-1 bg-card border border-border rounded-full text-accent"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1 + index * 0.1 }}
-                >
-                  {skill}
-                </motion.span>
-              ))}
+             {["Python", "React", "AI/ML", "Cloud", "Full-Stack","NLP"].map((skill, index) => (
+              <motion.span
+                key={skill}
+                className="px-3 py-1 bg-blue-600 border border-blue-400 rounded-full text-white"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1 + index * 0.1 }}
+              >
+                {skill}
+              </motion.span>
+            ))}
             </div>
           </motion.div>
 

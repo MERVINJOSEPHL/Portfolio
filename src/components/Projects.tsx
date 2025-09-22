@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "ContractX AI",
       description: "AI-powered contract analysis platform using transformer models for extracting contractual obligations and compliance workflows.",
-      image: projectAi,
+      image: "/certifications/raptor-chatbot.jpg",
       icon: Brain,
       tech: ["Python", "Transformers", "NLP", "Azure OpenAI", "Flask"],
       github: "#",
@@ -27,38 +27,58 @@ const Projects = () => {
     {
       title: "Advinci Voice Platform",
       description: "Enhanced voice-over-telecommunication efficiency through language model optimization and sentiment analysis.",
-      image: projectAi,
+      image: "/certifications/advinci.png",
       icon: Database,
-      tech: ["Python", "Claude Models", "Voice Processing", "LLM"],
+      tech: ["Voice Processing", "LLM","Sentiment Analysis","Servem AI","FastAPI"],
       github: "#",
       demo: "#",
       category: "AI/ML"
     },
     {
-      title: "Microservices Architecture",
-      description: "Scalable microservices system handling high-volume data processing with comprehensive RESTful APIs.",
-      image: projectAi,
-      icon: Cloud,
-      tech: ["Python", "Flask", "PostgreSQL", "Docker", "Kubernetes"],
-      github: "#",
-      demo: "#",
-      category: "Backend"
-    },
-    {
-      title: "ChatGPT Clone",
-      description: "Full-stack AI chat application similar to ChatGPT using Azure OpenAI and Amazon Claude models.",
-      image: projectAi,
+      title: "Asami",
+      description: "Full-stack AI chat bot application using Azure OpenAI and Amazon Claude models. To increase productivity and efficiency of SEO.",
+      image: "/certifications/chatbot.jpg",
       icon: Code,
       tech: ["React", "Flask", "PostgreSQL", "Azure OpenAI", "Claude"],
       github: "#",
       demo: "#",
-      category: "Full-Stack"
-    }
+      category: "AI/ML"
+    },
+    {
+"title": "Synthetic Contract Generator",
+"description": "Python-based system generating synthetic 'Scope of Work' clauses for construction contracts, ensuring privacy preservation while mimicking real contract structures using LLM and anonymization techniques.",
+"image": "/certifications/contract.png",
+"icon": "FileText",
+"tech": ["GEO Fence", "Streamlit", "Google Gemini API", "Faker", "Pandas"],
+"github": "https://github.com/MERVINJOSEPHL/synthetic-contract-generator",
+"demo": "https://synthetic-contract-generator.onrender.com/",
+"category": "AI"
+},
+{
+"title": "Student Management Application",
+"description": "Full-stack application for collecting and organizing student data in a file-based manner, supporting features like viewing, filtering, searching, updating, and deleting student records with performance analytics.",
+"image": "/certifications/OIP.webp",
+"icon": "Users",
+"tech": ["Python", "Flask", "SQLite", "Jinja2", "Bootstrap"],
+"github": "https://github.com/MERVINJOSEPHL/Student-Management-Application",
+"demo": "#",
+"category": "Full-Stack"
+}, {
+"title": "HouseHoldService",
+"description": "Multi-user application serving as a platform for comprehensive home servicing and solutions, featuring roles for admin, service providers, and customers with functionalities like service management, booking, and reporting.",
+"image": "/certifications/householdservice.webp",
+"icon": "Home",
+"tech": ["Flask", "VueJS", "SQLite", "Redis", "Celery", "Bootstrap"],
+"github": "https://github.com/MERVINJOSEPHL/HouseHoldService",
+"demo": "https://drive.google.com/file/d/1VtJtcfYBeCBCh40OpnR2Kiv4NIGwF5bn/view",
+"category": "Full-Stack"
+},
+
   ];
 
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-muted/20">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -97,9 +117,7 @@ const Projects = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <div className="p-2 bg-primary/20 backdrop-blur-sm rounded-lg">
-                          <Icon className="w-6 h-6 text-primary" />
-                        </div>
+                       
                       </div>
                       <div className="absolute top-4 right-4">
                         <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30">
@@ -130,23 +148,6 @@ const Projects = () => {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex gap-3">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </Button>
-                        <Button
-                          size="sm"
-                          className="flex-1 bg-primary hover:bg-primary/90"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Demo
-                        </Button>
-                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -156,17 +157,18 @@ const Projects = () => {
 
           {/* View More Button */}
           <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
+          variants={itemVariants}
+          className="text-center mt-12"
+        >
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8"
+            onClick={() => window.location.href = "https://github.com/MERVINJOSEPHL/"}
           >
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8"
-            >
-              View All Projects
-            </Button>
-          </motion.div>
+            View All Projects
+          </Button>
+        </motion.div>
         </motion.div>
       </div>
     </section>

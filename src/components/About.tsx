@@ -58,7 +58,7 @@ const About = () => {
 
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-muted/20">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}

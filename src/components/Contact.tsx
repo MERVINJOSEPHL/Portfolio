@@ -79,12 +79,7 @@ const Contact = () => {
       href: "https://linkedin.com/in/mervin-joseph10",
       color: "hover:text-blue-400",
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "#",
-      color: "hover:text-sky-400",
-    },
+
   ];
 
 
@@ -109,97 +104,9 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="">
             {/* Contact Form */}
-            <motion.div variants={itemVariants}>
-              <Card className="bg-card border-border">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-foreground">
-                          Name
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          placeholder="Your name"
-                          required
-                          className="bg-background border-border focus:border-primary"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-foreground">
-                          Email
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          placeholder="your.email@example.com"
-                          required
-                          className="bg-background border-border focus:border-primary"
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-foreground">
-                        Subject
-                      </label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        placeholder="What's this about?"
-                        required
-                        className="bg-background border-border focus:border-primary"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-foreground">
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Tell me about your project or opportunity..."
-                        rows={5}
-                        required
-                        className="bg-background border-border focus:border-primary resize-none"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3"
-                    >
-                      {isSubmitting ? (
-                        <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-                          Sending...
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-2">
-                          <Send className="w-4 h-4" />
-                          Send Message
-                        </div>
-                      )}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
+  
 
             {/* Contact Info */}
             <motion.div variants={itemVariants} className="space-y-8">

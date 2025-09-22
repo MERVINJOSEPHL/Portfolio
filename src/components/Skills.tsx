@@ -123,7 +123,7 @@ const Skills = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { number: "1.8+", label: "Years Experience", icon: "🚀" },
-                { number: "25+", label: "Projects Completed", icon: "💼" },
+                { number: "10+", label: "Projects Completed", icon: "💼" },
                 { number: "15+", label: "Technologies Mastered", icon: "⚡" },
               ].map((stat, index) => (
                 <Card key={stat.label} className="bg-card border-border p-6 text-center card-hover">
