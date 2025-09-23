@@ -99,16 +99,33 @@ const Hero = () => {
             variants={slideUpVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Button 
-              size="lg" 
+            {/* View My Work → Projects */}
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold pulse-glow"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#projects");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               View My Work
             </Button>
-            <Button 
-              variant="outline" 
+            
+            {/* Get In Touch → Contact */}
+            <Button
+              variant="outline"
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 text-lg font-semibold"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector("#contact");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Get In Touch
             </Button>
